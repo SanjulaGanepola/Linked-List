@@ -16,6 +16,36 @@ public class LinkedList {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
+    }
+    
+    public void get(){
+        
+    }
+    
+    public int getSize(){
+        
+    }
+    
+    @Override
+    public String toString(){
+        
+    }
+    
+    public void add(){
+        
+    }
+    
+    public void add(int i){
+        
+    }
+    
+    public void remove(){
+        
+    }
+    
+    public void remove(){
+        
     }
     
 }
