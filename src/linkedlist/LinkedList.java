@@ -25,12 +25,12 @@ public class LinkedList {
     }
     
     public int getSize(){
-        
+        return 1;
     }
     
     @Override
     public String toString(){
-        
+        return "a";
     }
     
     //Carson
