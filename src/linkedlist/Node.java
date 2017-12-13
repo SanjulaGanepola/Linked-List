@@ -19,7 +19,8 @@ public class Node<I> implements Comparable<Node> {
     }
 
     public Node(I insert, Node<I> pnext) {
-
+        setItem(insert);
+        setNext(pnext);
     }
 
     public Node(I insert, Node<I> pnext, Node<I> pprev) {
@@ -39,7 +40,7 @@ public class Node<I> implements Comparable<Node> {
     }
 
     public void setNext(Node<I> item) {
-
+        
     }
 
     @Override
