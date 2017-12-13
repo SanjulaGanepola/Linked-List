@@ -10,7 +10,7 @@ package linkedlist;
  * @author 348676487
  */
 public class LinkedList {
-
+    
     /**
      * @param args the command line arguments
      */
@@ -24,6 +24,7 @@ public class LinkedList {
     }
     
     public int getSize(){
+       
         
     }
     
