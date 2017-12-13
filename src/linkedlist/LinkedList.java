@@ -44,7 +44,7 @@ public class LinkedList {
         
     }
     
-    public void remove(){
+    public void remove(int a){
         
     }
     
