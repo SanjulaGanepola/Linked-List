@@ -19,6 +19,7 @@ public class LinkedList {
         
     }
     
+    //Sanjula
     public void get(){
         
     }
@@ -32,6 +33,7 @@ public class LinkedList {
         
     }
     
+    //Carson
     public void add(){
         
     }
@@ -40,6 +42,7 @@ public class LinkedList {
         
     }
     
+    //Glen
     public void remove(){
         
     }
