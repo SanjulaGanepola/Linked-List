@@ -9,30 +9,39 @@ package linkedlist;
  *
  * @author 072671415
  */
-public class Node<I> implements Comparable<Node>{
+public class Node<I> implements Comparable<Node> {
+
     private I item = null;
     private Node<I> next = null;
-    public Node(I insert){
-        
+
+    public Node(I insert) {
+
     }
-    public Node (I insert, Node<I> pnext){
-        
+
+    public Node(I insert, Node<I> pnext) {
+
     }
-    public Node(I insert, Node<I> pnext, Node<I> pprev){
-        
+
+    public Node(I insert, Node<I> pnext, Node<I> pprev) {
+
     }
-    public I getItem(){
+
+    public I getItem() {
         return null;
     }
-    public void setItem (I item){
-        
+
+    public void setItem(I item) {
+
     }
-    public Node<I> getNext(){
+
+    public Node<I> getNext() {
         return null;
     }
-    public void setNext(Node<I> item){
-        
+
+    public void setNext(Node<I> item) {
+
     }
+
     @Override
     public int compareTo(Node o) {
         return this.compareTo(o);
