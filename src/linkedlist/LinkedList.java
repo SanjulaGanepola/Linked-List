@@ -9,46 +9,59 @@ package linkedlist;
  *
  * @author 348676487
  */
-public class LinkedList {
-    
+public class LinkedList implements List {
+
+    private Node myHead;
+    private Node myTail;
+    private int iMySize;
+
+    public LinkedList() {
+        myHead = null;
+        myTail = null;
+        iMySize = 0;
+    }
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
     }
-    
-    //Sanjula
-    public void get(){
-        
-    }
-    
-    public int getSize(){
-        return 1;
-    }
-    
+
     @Override
-    public String toString(){
-        return "a";
+    public void add(Object item) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    //Carson
-    public void add(){
-        
+
+    @Override
+    public void add(Object item, int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public void add(int i){
-        
+
+    @Override
+    public Object set(Object item, int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    //Glen
-    public void remove(){
-        
+
+    @Override
+    public void add(List other) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    public void remove(int a){
-        
+
+    @Override
+    public Object get(int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    @Override
+    public Object remove(int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int size() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
