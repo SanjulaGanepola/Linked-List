@@ -19,20 +19,21 @@ public class LinkedList {
         
     }
     
+    //Sanjula
     public void get(){
         
     }
     
     public int getSize(){
-       
-        
+        return 1;
     }
     
     @Override
     public String toString(){
-        
+        return "a";
     }
     
+    //Carson
     public void add(){
         
     }
@@ -41,6 +42,7 @@ public class LinkedList {
         
     }
     
+    //Glen
     public void remove(){
         
     }
