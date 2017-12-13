@@ -28,12 +28,20 @@ public class LinkedList implements List {
         // TODO code application logic here
 
     }
-
+    /**
+     * adds an element item to the end of the list
+     * @param item element to add to end of the list
+     */
     @Override
     public void add(Object item) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-
+    
+    /**
+     * adds an element item at the given index pos
+     * @param item  element to add to list
+     * @param pos   index to add element in list
+     */
     @Override
     public void add(Object item, int pos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
@@ -41,11 +49,6 @@ public class LinkedList implements List {
 
     @Override
     public Object set(Object item, int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void add(List other) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

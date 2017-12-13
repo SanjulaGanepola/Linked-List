@@ -9,14 +9,12 @@ package linkedlist;
  *
  * @author 072671415
  */
-public interface List {
+public interface List { 
     public void add(Object item);
 
     public void add(Object item, int pos);
 
     public Object set(Object item, int pos);
-
-    public void add(List other);
 
     public Object get(int pos);
 
