@@ -9,8 +9,9 @@ package linkedlist;
  *
  * @author 072671415
  */
-public class Node<I> implements Comparable<Node> {
-
+public class Node<I> implements Comparable<Node>{
+    //The design decision was to be single because it's easier because we don't
+    //get marks deducted from it.
     private I item = null;
     private Node<I> next = null;
 

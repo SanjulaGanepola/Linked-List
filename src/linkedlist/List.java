@@ -9,19 +9,19 @@ package linkedlist;
  *
  * @author 348676487
  */
-public interface List {
+public interface List { 
+    public void add(Object item);
+
+    public void add(Object item, int pos);
+
+    public Object set(Object item, int pos);
+
     public Object get(int pos);
 
     public int getSize();
 
     @Override
     public String toString();
-
-    public void add(Object item);
-
-    public void add(List other);
-
-    public void add(Object item, int pos);
 
     public Object remove(int pos);
 

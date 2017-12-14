@@ -44,22 +44,53 @@ public class LinkedList implements List {
         }
         return 1;
     }
-
+    /**
+     * adds an element item to the end of the list
+     * @param item element to add to end of the list
+     */
     @Override
     public void add(Object item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        add(item,iMySize);
     }
-
-    @Override
-    public void add(List other) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+    
+    /**
+     * adds an element item at the given index pos
+     * @param item  element to add to list
+     * @param pos   index to add element in list
+     */
     @Override
     public void add(Object item, int pos) {
+        Node n = (Node)item;
+        
+        if(myHead==null){
+            myHead = n;
+            myTail = n;
+            iMySize = 1;
+        }
+        else if (pos==iMySize){
+            myTail.setNext(n);
+            myTail = n;
+            myTail.setNext(null);
+        }
+        else{
+            for(int i = 0;i<=pos;i++){
+                
+            }
+        }
+    }
+
+    @Override
+    public Object set(Object item, int pos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+
+    /**
+     * Delete an item at a given index i.
+     *
+     * @param pos The index of the item
+     * @return
+     */
     @Override
     public Object remove(int pos) {
         return pos;
