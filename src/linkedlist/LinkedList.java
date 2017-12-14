@@ -54,7 +54,7 @@ public class LinkedList implements List {
      */
     @Override
     public Object remove(int pos) {
-
+        return pos;
     }
 
     /**
@@ -64,7 +64,7 @@ public class LinkedList implements List {
      * @return
      */
     @Override
-    public Object remove(List other) {
+    public Object remove(Object other) {
         Node n = (Node) other;
         if (myHead == n.getItem()) {
             remove(0);
@@ -76,6 +76,7 @@ public class LinkedList implements List {
                 remove(i);
             }
         }
+        return other;
     }
 
     /**
