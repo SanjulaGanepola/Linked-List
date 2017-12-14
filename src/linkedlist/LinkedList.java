@@ -75,4 +75,46 @@ public class LinkedList implements List {
         
     }
 
+    /**
+     * @return the myHead
+     */
+    public Node getMyHead() {
+        return myHead;
+    }
+
+    /**
+     * @param myHead the myHead to set
+     */
+    public void setMyHead(Node myHead) {
+        this.myHead = myHead;
+    }
+
+    /**
+     * @return the myTail
+     */
+    public Node getMyTail() {
+        return myTail;
+    }
+
+    /**
+     * @param myTail the myTail to set
+     */
+    public void setMyTail(Node myTail) {
+        this.myTail = myTail;
+    }
+
+    /**
+     * @return the iMySize
+     */
+    public int getiMySize() {
+        return iMySize;
+    }
+
+    /**
+     * @param iMySize the iMySize to set
+     */
+    public void setiMySize(int iMySize) {
+        this.iMySize = iMySize;
+    }
+
 }
