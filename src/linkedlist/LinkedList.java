@@ -69,8 +69,10 @@ public class LinkedList implements List {
         if (myHead == n.getItem()) {
             remove(0);
         }
+        Node temp = myHead;
         for (int i = 1; i < getSize(); i++) {
-            if (myHead.getNext() == n.getItem()) {
+            temp = temp.getNext();
+            if (temp == n.getItem()) {
                 remove(i);
             }
         }
