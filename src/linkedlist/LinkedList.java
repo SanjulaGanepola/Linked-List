@@ -26,21 +26,20 @@ public class LinkedList implements List {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+    }
 
+    @Override
+    public Object get(int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getSize() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
     public void add(Object item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void add(Object item, int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Object set(Object item, int pos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -50,7 +49,7 @@ public class LinkedList implements List {
     }
 
     @Override
-    public Object get(int pos) {
+    public void add(Object item, int pos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -60,7 +59,7 @@ public class LinkedList implements List {
     }
 
     @Override
-    public int size() {
+    public Object remove(List other) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
