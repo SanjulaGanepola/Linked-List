@@ -15,6 +15,6 @@ public class Testing {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        LinkedList l = new LinkedList();
+        LinkedList patientList = new LinkedList();
     }
 }

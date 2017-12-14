@@ -23,19 +23,24 @@ public class LinkedList implements List {
 
     @Override
     public Object get(int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Node temp = myHead;
+        for (int i = 0; i < pos; i++) {
+            temp = temp.getNext();
+        }
+        return temp;
     }
 
     @Override
     public int getSize() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        LinkedList patientsList = new LinkedList();
-        
+        Node temp = myHead;
+        int i;
+        //for (i = 0; i<){
+        //if the next node is null, then stop the for loop
+        if (temp.getNext() == null) {
+
+            //  }
+        }
+        return 1;
     }
 
     @Override
@@ -49,33 +54,18 @@ public class LinkedList implements List {
     }
 
     @Override
-    public Object get(int pos) {
-    for (int i = 0; i<iMySize;i++){
-        
-    }
-    //return node at position index    
+    public void add(Object item, int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    /**
-     * Delete an item at a given index i.
-     *
-     * @param pos The index of the item
-     * @return
-     */
     @Override
     public Object remove(int pos) {
-        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-    /**
-     * Delete a matching item d.
-     *
-     * @param other The matching item
-     * @return
-     */
     @Override
     public Object remove(List other) {
-        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
@@ -119,5 +109,4 @@ public class LinkedList implements List {
     public void setiMySize(int iMySize) {
         this.iMySize = iMySize;
     }
-
 }
