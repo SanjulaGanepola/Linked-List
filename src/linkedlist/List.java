@@ -7,7 +7,7 @@ package linkedlist;
 
 /**
  *
- * @author 072671415
+ * @author 348676487
  */
 public interface List {
     public Object get(int pos);

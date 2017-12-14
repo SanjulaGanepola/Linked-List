@@ -53,14 +53,26 @@ public class LinkedList implements List {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    /**
+     * Delete an item at a given index i.
+     *
+     * @param pos The index of the item
+     * @return
+     */
     @Override
     public Object remove(int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
+    /**
+     * Delete a matching item d.
+     *
+     * @param other The matching item
+     * @return
+     */
     @Override
     public Object remove(List other) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
 }
