@@ -13,12 +13,12 @@ public class LinkedList implements List {
 
     private Node myHead;
     private Node myTail;
-    private int iMySize;
+    private int size;
 
     public LinkedList() {
         myHead = null;
         myTail = null;
-        iMySize = 0;
+        size = 0;
     }
 
     @Override
@@ -32,12 +32,14 @@ public class LinkedList implements List {
 
     @Override
     public int getSize() {
+        return size;
+        
         Node temp = myHead;
         int i;
         //for (i = 0; i<){
         //if the next node is null, then stop the for loop
         if (temp.getNext() == null) {
-
+            
             //  }
         }
         return 1;
