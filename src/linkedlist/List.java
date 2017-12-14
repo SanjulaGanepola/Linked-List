@@ -25,5 +25,5 @@ public interface List {
 
     public Object remove(int pos);
 
-    public Object remove(List other);
+    public Object remove(Object other);
 }
