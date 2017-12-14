@@ -26,7 +26,8 @@ public class LinkedList implements List {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-
+        LinkedList patientsList = new LinkedList();
+        
     }
 
     @Override
@@ -51,7 +52,10 @@ public class LinkedList implements List {
 
     @Override
     public Object get(int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    for (int i = 0; i<iMySize;i++){
+        
+    }
+    //return node at position index    
     }
 
     @Override
