@@ -7,7 +7,7 @@ package linkedlist;
 
 /**
  *
- * @author 348676487
+ * @author 072660210
  */
 public class Patient implements Comparable {
 

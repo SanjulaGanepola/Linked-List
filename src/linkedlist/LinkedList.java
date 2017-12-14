@@ -23,12 +23,24 @@ public class LinkedList implements List {
 
     @Override
     public Object get(int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Node temp = myHead;
+        for (int i = 0; i < pos; i++) {
+            temp = temp.getNext();
+        }
+        return temp;
     }
 
     @Override
     public int getSize() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Node temp = myHead;
+        int i;
+        //for (i = 0; i<){
+        //if the next node is null, then stop the for loop
+        if (temp.getNext() == null) {
+
+            //  }
+        }
+        return 1;
     }
     /**
      * adds an element item to the end of the list
@@ -82,12 +94,6 @@ public class LinkedList implements List {
         return pos;
     }
 
-    /**
-     * Delete a matching item d.
-     *
-     * @param other The matching item
-     * @return
-     */
     @Override
     public Object remove(Object other) {
         Node n = (Node) other;
@@ -145,5 +151,4 @@ public class LinkedList implements List {
     public void setiMySize(int iMySize) {
         this.iMySize = iMySize;
     }
-
 }
