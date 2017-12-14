@@ -23,12 +23,6 @@ public interface List {
     @Override
     public String toString();
 
-    public void add(Object item);
-
-    public void add(List other);
-
-    public void add(Object item, int pos);
-
     public Object remove(int pos);
 
     public Object remove(List other);
