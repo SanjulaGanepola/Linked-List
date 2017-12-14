@@ -7,23 +7,23 @@ package linkedlist;
 
 /**
  *
- * @author 072671415
+ * @author 348676487
  */
 public interface List {
-    public void add(Object item);
-
-    public void add(Object item, int pos);
-
-    public Object set(Object item, int pos);
-
-    public void add(List other);
-
     public Object get(int pos);
 
-    public Object remove(int pos);
-
-    public int size();
+    public int getSize();
 
     @Override
     public String toString();
+
+    public void add(Object item);
+
+    public void add(List other);
+
+    public void add(Object item, int pos);
+
+    public Object remove(int pos);
+
+    public Object remove(List other);
 }

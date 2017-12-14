@@ -21,6 +21,14 @@ public class LinkedList implements List {
         iMySize = 0;
     }
 
+    @Override
+    public Object get(int pos) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int getSize() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     /**
      * @param args the command line arguments
      */
@@ -32,16 +40,6 @@ public class LinkedList implements List {
 
     @Override
     public void add(Object item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public void add(Object item, int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
-    @Override
-    public Object set(Object item, int pos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -58,14 +56,68 @@ public class LinkedList implements List {
     //return node at position index    
     }
 
+    /**
+     * Delete an item at a given index i.
+     *
+     * @param pos The index of the item
+     * @return
+     */
     @Override
     public Object remove(int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        
     }
 
+    /**
+     * Delete a matching item d.
+     *
+     * @param other The matching item
+     * @return
+     */
     @Override
-    public int size() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public Object remove(List other) {
+        
+    }
+
+    /**
+     * @return the myHead
+     */
+    public Node getMyHead() {
+        return myHead;
+    }
+
+    /**
+     * @param myHead the myHead to set
+     */
+    public void setMyHead(Node myHead) {
+        this.myHead = myHead;
+    }
+
+    /**
+     * @return the myTail
+     */
+    public Node getMyTail() {
+        return myTail;
+    }
+
+    /**
+     * @param myTail the myTail to set
+     */
+    public void setMyTail(Node myTail) {
+        this.myTail = myTail;
+    }
+
+    /**
+     * @return the iMySize
+     */
+    public int getiMySize() {
+        return iMySize;
+    }
+
+    /**
+     * @param iMySize the iMySize to set
+     */
+    public void setiMySize(int iMySize) {
+        this.iMySize = iMySize;
     }
 
 }
