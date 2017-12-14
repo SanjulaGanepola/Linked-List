@@ -34,7 +34,7 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        add(item,iMySize);
     }
     
     /**
@@ -44,7 +44,23 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item, int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Node n = (Node)item;
+        
+        if(myHead==null){
+            myHead = n;
+            myTail = n;
+            iMySize = 1;
+        }
+        else if (pos==iMySize){
+            myTail.setNext(n);
+            myTail = n;
+            myTail.setNext(null);
+        }
+        else{
+            for(int i = 0;i<=pos;i++){
+                
+            }
+        }
     }
 
     @Override
