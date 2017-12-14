@@ -60,12 +60,21 @@ public class LinkedList implements List {
 
     @Override
     public Object remove(int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return myHead;
     }
 
     @Override
     public Object remove(List other) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Node n = (Node) other;
+        if (myHead == n.getItem()) {
+            remove(0);
+        }
+        for (int i = 1; i < getSize(); i++) {
+            if (myHead.getNext() == n.getItem()) {
+                remove(i);
+            }
+        }
+        return myHead;
     }
 
     /**
