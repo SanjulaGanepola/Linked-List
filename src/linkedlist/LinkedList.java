@@ -79,8 +79,7 @@ public class LinkedList implements List {
      */
     @Override
     public Object remove(int pos) {
-        return null;
-
+        return pos;
     }
 
     /**
@@ -90,17 +89,19 @@ public class LinkedList implements List {
      * @return
      */
     @Override
-    public Object remove(List other) {
+    public Object remove(Object other) {
         Node n = (Node) other;
         if (myHead == n.getItem()) {
             remove(0);
         }
+        Node temp = myHead;
         for (int i = 1; i < getSize(); i++) {
-            if (myHead.getNext() == n.getItem()) {
+            temp = temp.getNext();
+            if (temp == n.getItem()) {
                 remove(i);
             }
         }
-        return null;
+        return other;
     }
 
     /**
