@@ -21,13 +21,6 @@ public class LinkedList implements List {
         iMySize = 0;
     }
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-
     @Override
     public Object get(int pos) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
