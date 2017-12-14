@@ -71,7 +71,9 @@ public class LinkedList implements List {
             myTail.setNext(null);
         }
         else{
+            Node temp = myHead;
             for(int i = 0;i<=pos;i++){
+                temp = temp.getNext();
                 
             }
         }
