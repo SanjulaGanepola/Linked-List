@@ -33,50 +33,55 @@ public class LinkedList implements List {
     @Override
     public int getSize() {
         return size;
-        
+
         Node temp = myHead;
         int i;
         //for (i = 0; i<){
         //if the next node is null, then stop the for loop
         if (temp.getNext() == null) {
-            
+
             //  }
         }
         return 1;
     }
+
     /**
      * adds an element item to the end of the list
+     *
      * @param item element to add to end of the list
      */
     @Override
     public void add(Object item) {
-        add(item,size);
+        Node n = (Node)item;
+        if (myHead == null) {
+            myHead = n;
+            myTail = n;
+        }
+        else{
+            add(item,size+1);
+        }
     }
-    
+
     /**
      * adds an element item at the given index pos
-     * @param item  element to add to list
-     * @param pos   index to add element in list
+     *
+     * @param item element to add to list
+     * @param pos index to add element in list
      */
     @Override
     public void add(Object item, int pos) {
-        Node n = (Node)item;
-        
-        if(myHead==null){
-            myHead = n;
-            myTail = n;
-            size = 1;
-        }
-        else if (pos==size){
+        Node n = (Node) item;
+        if (pos==size){
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
         }
         else{
-            
-            n.setNext(temp);
-            
+            Node prev = (Node)this.get(pos-1);
+            n.setNext(prev.getNext());
+            prev.setNext(n);
         }
+        
     }
 
     @Override
@@ -84,21 +89,24 @@ public class LinkedList implements List {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
     /**
      * Delete an item at a given index i.
      *
-     * @param pos The index of the item
-     * @return
+     * @param i The index of the item.
      */
     @Override
-    public Object remove(int pos) {
-        return pos;
+    public void remove(int i) {
+
     }
 
+    /**
+     * Delete a matching item d.
+     *
+     * @param d The item to remove.
+     */
     @Override
-    public Object remove(Object other) {
-        Node n = (Node) other;
+    public void remove(Object d) {
+        Node n = (Node) d;
         if (myHead == n.getItem()) {
             remove(0);
         }
@@ -109,7 +117,7 @@ public class LinkedList implements List {
                 remove(i);
             }
         }
-        return other;
+
     }
 
     /**
@@ -140,17 +148,4 @@ public class LinkedList implements List {
         this.myTail = myTail;
     }
 
-    /**
-     * @return the iMySize
-     */
-    public int getiMySize() {
-        return iMySize;
-    }
-
-    /**
-     * @param iMySize the iMySize to set
-     */
-    public void setiMySize(int iMySize) {
-        this.iMySize = iMySize;
-    }
 }

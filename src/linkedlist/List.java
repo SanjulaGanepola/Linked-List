@@ -23,7 +23,7 @@ public interface List {
     @Override
     public String toString();
 
-    public Object remove(int pos);
+    public void remove(int i);
 
-    public Object remove(Object other);
+    public void remove(Object d);
 }
