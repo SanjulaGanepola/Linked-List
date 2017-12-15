@@ -56,7 +56,14 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item) {
-        add(item, iMySize);
+        Node n = (Node)item;
+        if (myHead == null) {
+            myHead = n;
+            myTail = n;
+        }
+        else{
+            add(item,size+1);
+        }
     }
 
     /**
@@ -68,25 +75,17 @@ public class LinkedList implements List {
     @Override
     public void add(Object item, int pos) {
         Node n = (Node) item;
-
-        if (myHead == null) {
-            myHead = n;
-            myTail = n;
-            iMySize = 1;
-        } else if (pos == iMySize) {
+        if (pos==size){
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
-        } else {
-            for (int i = 0; i <= pos; i++) {
-
-            }
         }
-    }
-
-    @Override
-    public Object set(Object item, int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        else{
+            Node prev = (Node)this.get(pos-1);
+            n.setNext(prev.getNext());
+            prev.setNext(n);
+        }
+        
     }
 
     /**
@@ -96,7 +95,22 @@ public class LinkedList implements List {
      */
     @Override
     public void remove(int i) {
-
+        //Node previous to the node at i
+        Node previous;
+        //Node after to the node at i
+        Node after;
+        //Node at i is empty
+        if (get(i) == null) {
+            return;
+        } else {
+            previous = get(i - 1);
+            if (previous.getNext().getNext() == null) {
+                previous.setNext(null);
+            } else {
+                after = previous.getNext().getNext();
+                previous.setNext(after);
+            }
+        }
     }
 
     /**
@@ -117,6 +131,7 @@ public class LinkedList implements List {
                 remove(i);
             }
         }
+
     }
 
     /**
@@ -131,33 +146,5 @@ public class LinkedList implements List {
      */
     public void setMyHead(Node myHead) {
         this.myHead = myHead;
-    }
-
-    /**
-     * @return the myTail
-     */
-    public Node getMyTail() {
-        return myTail;
-    }
-
-    /**
-     * @param myTail the myTail to set
-     */
-    public void setMyTail(Node myTail) {
-        this.myTail = myTail;
-    }
-
-    /**
-     * @return the iMySize
-     */
-    public int getiMySize() {
-        return iMySize;
-    }
-
-    /**
-     * @param iMySize the iMySize to set
-     */
-    public void setiMySize(int iMySize) {
-        this.iMySize = iMySize;
     }
 }
