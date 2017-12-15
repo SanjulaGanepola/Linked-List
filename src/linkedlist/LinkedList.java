@@ -88,11 +88,6 @@ public class LinkedList implements List {
         
     }
 
-    @Override
-    public Object set(Object item, int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     /**
      * Delete an item at a given index i.
      *
@@ -152,5 +147,4 @@ public class LinkedList implements List {
     public void setMyHead(Node myHead) {
         this.myHead = myHead;
     }
-
 }
