@@ -23,24 +23,29 @@ public class LinkedList implements List {
 
     @Override
     public Object get(int pos) {
+        //Temporary variable that stores the head 
         Node temp = myHead;
+        //Loops through the nodes until it reaches the position of the node
         for (int i = 0; i < pos; i++) {
+            //Temporary Node becomes the next node in the list
             temp = temp.getNext();
         }
+        //Returns the node at position
         return temp;
     }
 
     @Override
     public int getSize() {
-        return size;
+        //return size;      
 
         Node temp = myHead;
         int i;
-        //for (i = 0; i<){
+        for (i = 0; i<){
         //if the next node is null, then stop the for loop
-        if (temp.getNext() == null) {
-
-            //  }
+        temp = temp.getNext();
+            if (temp.getNext() == null) {
+            
+              }
         }
         return 1;
     }
