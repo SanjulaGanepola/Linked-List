@@ -113,7 +113,6 @@ public class LinkedList implements List {
                 previous.setNext(after);
             }
         }
-
     }
 
     /**
