@@ -35,19 +35,18 @@ public class LinkedList implements List {
     }
 
     @Override
-    public int getSize() {
-        //return size;      
-
+    public int getSize() {      
         Node temp = myHead;
-        int i;
-        for (i = 0; i<){
-        //if the next node is null, then stop the for loop
-        temp = temp.getNext();
-            if (temp.getNext() == null) {
-            
-              }
+        int i = 0;
+        if (temp==null){
+            return i;
         }
-        return 1;
+        while (temp.getNext()!=null){
+        temp = temp.getNext();
+        //if the next node is null, then stop the for loop
+        i++;
+              }      
+        return i;
     }
 
     /**
