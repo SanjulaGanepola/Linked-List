@@ -22,7 +22,7 @@ public class LinkedList implements List {
     }
 
     @Override
-    public Object get(int pos) {
+    public Node get(int pos) {
         //Temporary variable that stores the head 
         Node temp = myHead;
         //Loops through the nodes until it reaches the position of the node
