@@ -36,16 +36,15 @@ public class LinkedList implements List {
 
     @Override
     public int getSize() {
-        //return size;      
 
         Node temp = myHead;
         int i;
-        for (i = 0; i <) {
-            //if the next node is null, then stop the for loop
-            temp = temp.getNext();
-            if (temp.getNext() == null) {
+        for (i = 0; i<i;i++){
+        //if the next node is null, then stop the for loop
+        if (temp.getNext() == null) {
 
-            }
+            //  }
+        }
         }
         return 1;
     }
@@ -57,7 +56,14 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item) {
-        add(item, iMySize);
+        Node n = (Node)item;
+        if (myHead == null) {
+            myHead = n;
+            myTail = n;
+        }
+        else{
+            add(item,size+1);
+        }
     }
 
     /**
@@ -69,20 +75,17 @@ public class LinkedList implements List {
     @Override
     public void add(Object item, int pos) {
         Node n = (Node) item;
-
-        if (myHead == null) {
-            myHead = n;
-            myTail = n;
-            iMySize = 1;
-        } else if (pos == iMySize) {
+        if (pos==size){
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
-        } else {
-            for (int i = 0; i <= pos; i++) {
-
-            }
         }
+        else{
+            Node prev = (Node)this.get(pos-1);
+            n.setNext(prev.getNext());
+            prev.setNext(n);
+        }
+        
     }
 
     @Override
@@ -133,6 +136,7 @@ public class LinkedList implements List {
                 remove(i);
             }
         }
+
     }
 
     /**
@@ -149,31 +153,4 @@ public class LinkedList implements List {
         this.myHead = myHead;
     }
 
-    /**
-     * @return the myTail
-     */
-    public Node getMyTail() {
-        return myTail;
-    }
-
-    /**
-     * @param myTail the myTail to set
-     */
-    public void setMyTail(Node myTail) {
-        this.myTail = myTail;
-    }
-
-    /**
-     * @return the iMySize
-     */
-    public int getiMySize() {
-        return iMySize;
-    }
-
-    /**
-     * @param iMySize the iMySize to set
-     */
-    public void setiMySize(int iMySize) {
-        this.iMySize = iMySize;
-    }
 }
