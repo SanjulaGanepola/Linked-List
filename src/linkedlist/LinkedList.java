@@ -36,15 +36,15 @@ public class LinkedList implements List {
 
     @Override
     public int getSize() {
-        return size;
 
         Node temp = myHead;
         int i;
-        for (i = 0; i<){
+        for (i = 0; i<i;i++){
         //if the next node is null, then stop the for loop
         if (temp.getNext() == null) {
 
             //  }
+        }
         }
         return 1;
     }
@@ -136,20 +136,6 @@ public class LinkedList implements List {
      */
     public void setMyHead(Node myHead) {
         this.myHead = myHead;
-    }
-
-    /**
-     * @return the myTail
-     */
-    public Node getMyTail() {
-        return myTail;
-    }
-
-    /**
-     * @param myTail the myTail to set
-     */
-    public void setMyTail(Node myTail) {
-        this.myTail = myTail;
     }
 
 }
