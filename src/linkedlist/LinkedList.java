@@ -40,12 +40,12 @@ public class LinkedList implements List {
 
         Node temp = myHead;
         int i;
-        for (i = 0; i<){
-        //if the next node is null, then stop the for loop
-        temp = temp.getNext();
+        for (i = 0; i <) {
+            //if the next node is null, then stop the for loop
+            temp = temp.getNext();
             if (temp.getNext() == null) {
-            
-              }
+
+            }
         }
         return 1;
     }
@@ -97,8 +97,23 @@ public class LinkedList implements List {
      */
     @Override
     public void remove(int i) {
-        Node temp =get(i-1);
-        temp.setNext(temp.);
+        //Node previous to the node at i
+        Node previous;
+        //Node after to the node at i
+        Node after;
+        //Node at i is empty
+        if (get(i) == null) {
+            return;
+        } else {
+            previous = get(i - 1);
+            if (previous.getNext().getNext() == null) {
+                previous.setNext(null);
+            } else {
+                after = previous.getNext().getNext();
+                previous.setNext(after);
+            }
+        }
+
     }
 
     /**
