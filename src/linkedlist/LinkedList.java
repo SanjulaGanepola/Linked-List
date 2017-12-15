@@ -92,7 +92,7 @@ public class LinkedList implements List {
      */
     @Override
     public void remove(int i) {
-
+        get(i-1).setNext(get(i+1));
     }
 
     /**
