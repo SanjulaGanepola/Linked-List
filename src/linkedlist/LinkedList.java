@@ -50,7 +50,7 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item) {
-        add(item,iMySize);
+        add(item,size);
     }
     
     /**
@@ -65,19 +65,17 @@ public class LinkedList implements List {
         if(myHead==null){
             myHead = n;
             myTail = n;
-            iMySize = 1;
+            size = 1;
         }
-        else if (pos==iMySize){
+        else if (pos==size){
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
         }
         else{
-            Node temp = myHead;
-            for(int i = 0;i<=pos;i++){
-                temp = temp.getNext();
-                
-            }
+            
+            n.setNext(temp);
+            
         }
     }
 
