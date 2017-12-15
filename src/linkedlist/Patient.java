@@ -13,7 +13,7 @@ public class Patient implements Comparable {
 
     private String firstName;
     private String lastName;
-    private int priority;
+    private Integer priority;
 
     @Override
     public String toString() {
@@ -22,7 +22,13 @@ public class Patient implements Comparable {
 
     @Override
     public int compareTo(Object o) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        Patient patient = (Patient) o;
+        if (firstName.compareTo(patient.firstName) == 0) {
+            if (lastName.compareTo(patient.lastName) == 0) {
+                return priority.compareTo(patient.priority);
+            }
+        }
+        return -1;
     }
 
     /**
