@@ -10,11 +10,13 @@ package linkedlist;
  * @author 348676487
  */
 public class Testing {
-        /**
+
+    /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
         LinkedList patientList = new LinkedList();
     }
-}
+    }
+

@@ -35,18 +35,18 @@ public class LinkedList implements List {
     }
 
     @Override
-    public int getSize() {
-
+    public int getSize() {      
         Node temp = myHead;
-        int i;
-        for (i = 0; i<i;i++){
+        int i = 0;
+        if (temp==null){
+            return i;
+        }
+        while (temp.getNext()!=null){
+        temp = temp.getNext();
         //if the next node is null, then stop the for loop
-        if (temp.getNext() == null) {
-
-            //  }
-        }
-        }
-        return 1;
+        i++;
+              }      
+        return i;
     }
 
     /**
@@ -89,11 +89,6 @@ public class LinkedList implements List {
         
     }
 
-    @Override
-    public Object set(Object item, int pos) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
     /**
      * Delete an item at a given index i.
      *
@@ -101,7 +96,22 @@ public class LinkedList implements List {
      */
     @Override
     public void remove(int i) {
-
+        //Node previous to the node at i
+        Node previous;
+        //Node after to the node at i
+        Node after;
+        //Node at i is empty
+        if (get(i) == null) {
+            return;
+        } else {
+            previous = get(i - 1);
+            if (previous.getNext().getNext() == null) {
+                previous.setNext(null);
+            } else {
+                after = previous.getNext().getNext();
+                previous.setNext(after);
+            }
+        }
     }
 
     /**
@@ -138,5 +148,4 @@ public class LinkedList implements List {
     public void setMyHead(Node myHead) {
         this.myHead = myHead;
     }
-
 }

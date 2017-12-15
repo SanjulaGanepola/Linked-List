@@ -15,8 +15,6 @@ public interface List {
 
     public void add(Object item, int pos);
 
-    public Object set(Object item, int pos);
-
     public Object get(int pos);
 
     public int getSize();
