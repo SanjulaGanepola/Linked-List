@@ -35,17 +35,17 @@ public class LinkedList implements List {
     }
 
     @Override
-    public int getSize() {      
+    public int getSize() {
         Node temp = myHead;
         int i = 0;
-        if (temp==null){
+        if (temp == null) {
             return i;
         }
-        while (temp.getNext()!=null){
-        temp = temp.getNext();
-        //if the next node is null, then stop the for loop
-        i++;
-              }      
+        while (temp.getNext() != null) {
+            temp = temp.getNext();
+            //if the next node is null, then stop the for loop
+            i++;
+        }
         return i;
     }
 
@@ -56,12 +56,11 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item) {
-        Node n = (Node)item;
+        Node n = (Node) item;
         if (myHead == null) {
             myHead = n;
             myTail = n;
-        }
-        else{
+        } else {
             myTail.setNext(n);
             myTail = n;
         }
@@ -76,17 +75,16 @@ public class LinkedList implements List {
     @Override
     public void add(Object item, int pos) {
         Node n = (Node) item;
-        if (pos==this.getSize()+1){
+        if (pos == this.getSize() + 1) {
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
-        }
-        else{
-            Node prev = (Node)this.get(pos-1);
+        } else {
+            Node prev = (Node) this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
         }
-        
+
     }
 
     /**
