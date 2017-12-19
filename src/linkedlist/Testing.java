@@ -17,14 +17,21 @@ public class Testing {
     public static void main(String[] args) {
         // TODO code application logic here
         //Test Cases
+        //Creating new Linked List
         LinkedList patientList = new LinkedList();
         System.out.println(patientList.getSize());
-        patientList.add(new Node (new Patient ("Sanju","Riser",1)));
+        
+        //Testing Add Methods
+        Patient Sanju = new Patient ("Sanju","Riser",1);
+        patientList.add(new Node (Sanju));
         System.out.println(patientList.getSize());
         patientList.add(new Node (new Patient ("Hawk","Glazing",2)));
+        patientList.add(new Node (new Patient ("Just", "Go", 3)),2);
+        
+        //Testing Remove Methods
         System.out.println(patientList.getSize());
-        patientList.remove(0);
-        System.out.println(patientList.get(0));
+        patientList.remove(Sanju);
+        System.out.println(patientList);
     }
     
 }

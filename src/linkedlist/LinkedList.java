@@ -38,6 +38,14 @@ public class LinkedList implements List {
         return temp;
     }
 
+    public String toString(){
+        String patients = "";
+        for (int i = 0; i<getSize();i++){
+            patients += get(i) + ",";
+        }
+        return patients.substring(0,patients.length()-1);  
+    }
+    
     @Override
     public int getSize() {
         Node temp = myHead;
@@ -133,6 +141,8 @@ public class LinkedList implements List {
     public void remove(Object d) {
         Node n = (Node) d;
         if (myHead == n.getItem()) {
+            //????????????????????????????
+            //remove the head but i need to shift it all back
             remove(0);
         }
         Node temp = myHead;

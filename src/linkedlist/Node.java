@@ -29,7 +29,9 @@ public class Node<I> implements Comparable<Node>{
     public int compareTo(Node o) {        
         return 0;
     }
-
+    public String toString (){
+        return item.toString();
+    }
     /**
      * @return the item
      */
