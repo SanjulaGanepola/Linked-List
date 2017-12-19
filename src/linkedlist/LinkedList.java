@@ -87,7 +87,12 @@ public class LinkedList implements List {
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
-        } else {
+        } 
+        else if(pos==0){
+            n.setNext(myHead);
+            myHead = n;
+        }
+        else {
             Node prev = (Node) this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
