@@ -136,6 +136,8 @@ public class LinkedList implements List {
     public void remove(Object d) {
         Node n = (Node) d;
         if (myHead == n.getItem()) {
+            //????????????????????????????
+            //remove the head but i need to shift it all back
             remove(0);
         }
         Node temp = myHead;
