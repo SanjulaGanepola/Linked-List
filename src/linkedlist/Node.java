@@ -14,7 +14,7 @@ public class Node<I> implements Comparable<Node>{
     //get marks deducted from it.
     private I item = null;
     private Node<I> next = null;
-
+    
     public Node(I insert) {
         setItem(insert);
     }

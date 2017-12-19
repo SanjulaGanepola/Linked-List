@@ -67,6 +67,7 @@ public class LinkedList implements List {
         } else {
             myTail.setNext(n);
             myTail = n;
+            myTail.setNext(null);
         }
     }
 
@@ -79,16 +80,13 @@ public class LinkedList implements List {
     @Override
     public void add(Object item, int pos) {
         Node n = (Node) item;
-        if (pos == this.getSize() + 1) {
-            myTail.setNext(n);
-            myTail = n;
-            myTail.setNext(null);
+        if (pos == this.getSize()+1) {
+            add(n);
         } else {
             Node prev = (Node) this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
         }
-
     }
 
     /**
