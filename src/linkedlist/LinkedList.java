@@ -41,9 +41,12 @@ public class LinkedList implements List {
     @Override
     public int getSize() {
         Node temp = myHead;
-        int i = 0;
+        int i = 1;
         if (temp == null) {
-            return i;
+            return 0;
+        }
+        if (temp!=null && temp.getNext() == null){
+            return 1;
         }
         while (temp.getNext() != null) {
             temp = temp.getNext();
@@ -79,7 +82,7 @@ public class LinkedList implements List {
     @Override
     public void add(Object item, int pos) {
         Node n = (Node) item;
-        if (pos == this.getSize() + 1) {
+        if (pos == this.getSize()) {
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);

@@ -16,12 +16,15 @@ public class Testing {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        //Test Cases
         LinkedList patientList = new LinkedList();
         System.out.println(patientList.getSize());
-        Patient a = new Patient ("Sanju","Riser",1);
-        Node n = new Node (a);
-        patientList.setMyHead(n);
+        patientList.add(new Node (new Patient ("Sanju","Riser",1)));
         System.out.println(patientList.getSize());
+        patientList.add(new Node (new Patient ("Hawk","Glazing",2)));
+        System.out.println(patientList.getSize());
+        patientList.remove(0);
+        System.out.println(patientList.get(0));
     }
     
 }
