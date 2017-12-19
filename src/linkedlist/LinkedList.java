@@ -70,6 +70,7 @@ public class LinkedList implements List {
         } else {
             myTail.setNext(n);
             myTail = n;
+            myTail.setNext(null);
         }
     }
 
