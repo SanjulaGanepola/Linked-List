@@ -25,8 +25,7 @@ public class Node<I> implements Comparable<Node>{
     }
 
     @Override
-    public int compareTo(Node o) {
-        
+    public int compareTo(Node o) {        
         return 0;
     }
 
