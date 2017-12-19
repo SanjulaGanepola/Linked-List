@@ -24,7 +24,7 @@ public class LinkedList implements List {
     @Override
     public Node get(int pos) {
         //Temporary variable that stores the head 
-        if (pos>getSize()){
+        if (pos>getSize()+1){
             System.out.println("ERROR");
             return null;
         }

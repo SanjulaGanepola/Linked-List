@@ -30,7 +30,7 @@ public class Testing {
         
         //Testing Remove Methods
         System.out.println(patientList.getSize());
-        patientList.remove(Sanju);
+//        patientList.remove(Sanju);
         System.out.println(patientList);
     }
     
