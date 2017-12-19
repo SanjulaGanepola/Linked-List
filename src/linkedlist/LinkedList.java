@@ -50,9 +50,9 @@ public class LinkedList implements List {
     }
 
     /**
-     * adds an element item to the end of the list
+     * Adds an element item to the end of the list.
      *
-     * @param item element to add to end of the list
+     * @param item Element to add to end of the list.
      */
     @Override
     public void add(Object item) {
@@ -67,10 +67,10 @@ public class LinkedList implements List {
     }
 
     /**
-     * adds an element item at the given index pos
+     * Adds an element item at the given index position.
      *
-     * @param item element to add to list
-     * @param pos index to add element in list
+     * @param item Element to add to list.
+     * @param pos Index to add element in list.
      */
     @Override
     public void add(Object item, int pos) {
@@ -84,7 +84,6 @@ public class LinkedList implements List {
             n.setNext(prev.getNext());
             prev.setNext(n);
         }
-
     }
 
     /**
@@ -130,7 +129,6 @@ public class LinkedList implements List {
                 remove(i);
             }
         }
-
     }
 
     /**
