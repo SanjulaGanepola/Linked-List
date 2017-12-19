@@ -38,6 +38,14 @@ public class LinkedList implements List {
         return temp;
     }
 
+    public String toString(){
+        String patients = "";
+        for (int i = 0; i<getSize();i++){
+            patients += get(i) + ",";
+        }
+        return patients.substring(0,patients.length()-1);  
+    }
+    
     @Override
     public int getSize() {
         Node temp = myHead;
