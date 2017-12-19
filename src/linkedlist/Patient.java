@@ -15,6 +15,12 @@ public class Patient implements Comparable {
     private String lastName;
     private Integer priority;
 
+    public Patient (String fName, String lName, Integer Priority){
+        firstName = fName;
+        lastName = lName;
+        priority = Priority;
+    }
+    
     @Override
     public String toString() {
         return firstName + " " + lastName + ": " + priority;
