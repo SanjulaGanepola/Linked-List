@@ -17,6 +17,7 @@ public class Testing {
     public static void main(String[] args) {
         // TODO code application logic here
         LinkedList patientList = new LinkedList();
+        Patient a = new Patient();
     }
     }
 
