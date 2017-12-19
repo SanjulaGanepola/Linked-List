@@ -7,7 +7,7 @@ package linkedlist;
 
 /**
  *
- * @author 348676487
+ * @author 072660210
  */
 public class Testing {
 
@@ -17,6 +17,12 @@ public class Testing {
     public static void main(String[] args) {
         // TODO code application logic here
         LinkedList patientList = new LinkedList();
+        System.out.println(patientList.getSize());
+        Patient a = new Patient ("Sanju","Riser",1);
+        Node n = new Node (a);
+        patientList.setMyHead(n);
+        System.out.println(patientList.getSize());
     }
-    }
+    
+}
 
