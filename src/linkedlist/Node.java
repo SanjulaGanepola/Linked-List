@@ -12,11 +12,12 @@ package linkedlist;
 public class Node<I> implements Comparable<Node>{
     //The design decision was to be single because it's easier because we don't
     //get marks deducted from it.
-    private I item = null;
-    private Node<I> next = null;
+    private I item;
+    private Node<I> next;
 
     public Node(I insert) {
         setItem(insert);
+        setNext(null);
     }
 
     public Node(I insert, Node<I> pnext) {
@@ -25,8 +26,7 @@ public class Node<I> implements Comparable<Node>{
     }
 
     @Override
-    public int compareTo(Node o) {
-        
+    public int compareTo(Node o) {        
         return 0;
     }
 
