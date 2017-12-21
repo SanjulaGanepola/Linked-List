@@ -19,18 +19,25 @@ public class Testing {
         //Test Cases
         //Creating new Linked List
         LinkedList patientList = new LinkedList();
-        System.out.println(patientList.getSize());
         
         //Testing Add Methods
         Patient Sanju = new Patient ("Sanju","Riser",1);
+        //Adds an already existing patient
         patientList.add(new Node (Sanju));
+        //Adds a patient to the list
+        patientList.add(new Node (new Patient ("Hawk","Jamin",2)));
+        //Adds a patient to the first position
+        patientList.add(new Node (new Patient ("Just", "Go", 3)),0);
+        
+        //Testing toString Method
+        System.out.println(patientList);
+        //Testing getSize Method
         System.out.println(patientList.getSize());
-        patientList.add(new Node (new Patient ("Hawk","Glazing",2)));
-        patientList.add(new Node (new Patient ("Just", "Go", 3)),2);
+        //Testing get Method
+        System.out.println(patientList.get(0));
         
         //Testing Remove Methods
-        System.out.println(patientList.getSize());
-//        patientList.remove(Sanju);
+        patientList.remove(0);
         System.out.println(patientList);
     }
     
