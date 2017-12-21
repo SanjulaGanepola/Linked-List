@@ -26,6 +26,11 @@ public class Patient implements Comparable {
         return firstName + " " + lastName + ": " + priority;
     }
 
+    /**
+     * 
+     * @param o
+     * @return 
+     */
     @Override
     public int compareTo(Object o) {
         Patient patient = (Patient) o;
