@@ -100,6 +100,9 @@ public class LinkedList implements List {
             n.setNext(myHead);
             myHead = n;
         }
+        else if(pos>this.getSize()){
+            throw new IndexOutOfBoundsException("Index Out Of Bounds");
+        }
         else {
             Node prev = (Node) this.get(pos - 1);
             n.setNext(prev.getNext());
