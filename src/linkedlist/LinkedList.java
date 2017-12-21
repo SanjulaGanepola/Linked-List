@@ -38,6 +38,7 @@ public class LinkedList implements List {
         return temp;
     }
 
+    @Override
     public String toString(){
         String patients = "";
         for (int i = 0; i<getSize();i++){
