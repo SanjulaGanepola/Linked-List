@@ -76,7 +76,7 @@ public class LinkedList implements List {
         Node n = (Node) item;
         if (myHead == null) {
             myHead = n;
-            myTail = n;
+            setMyTail(n);
         } else {
             add(item, this.getSize());
         }
@@ -92,9 +92,9 @@ public class LinkedList implements List {
     public void add(Object item, int pos) {
         Node n = (Node) item;
         if (pos == this.getSize()) {
-            myTail.setNext(n);
-            myTail = n;
-            myTail.setNext(null);
+            getMyTail().setNext(n);
+            setMyTail(n);
+            getMyTail().setNext(null);
         } else if (pos == 0) {
             n.setNext(myHead);
             myHead = n;
@@ -115,23 +115,32 @@ public class LinkedList implements List {
      */
     @Override
     public Object remove(int i) {
+        Node remove;
+
         //Node previous to the node at i
         Node previous;
-        //Node after to the node at i
-        Node after;
         //Node at i is empty
         if (get(i) == null) {
             return null;
         } //Node at i has a node
         else {
-            previous = get(i - 1);
-            if (previous.getNext().getNext() == null) {
+            //the node to remove
+            remove = get(i);
+            //remove the head
+            if (remove == getMyHead()) {
+                setMyHead(remove.getNext());
+            } //remove tail
+            else if (remove == getMyTail()) {
+                previous = get(i - 1);
                 previous.setNext(null);
+                setMyTail(previous);
             } else {
-                after = previous.getNext().getNext();
+                //the node previous to the node to remove
+                previous = get(i - 1);
+                Node after = previous.getNext().getNext();
                 previous.setNext(after);
             }
-            return get(i);
+            return remove;
         }
     }
 
@@ -169,5 +178,19 @@ public class LinkedList implements List {
      */
     public void setMyHead(Node myHead) {
         this.myHead = myHead;
+    }
+
+    /**
+     * @return the myTail
+     */
+    public Node getMyTail() {
+        return myTail;
+    }
+
+    /**
+     * @param myTail the myTail to set
+     */
+    public void setMyTail(Node myTail) {
+        this.myTail = myTail;
     }
 }
