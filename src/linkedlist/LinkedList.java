@@ -24,7 +24,8 @@ public class LinkedList implements List {
     @Override
     public Node get(int pos) {
         //Temporary variable that stores the head 
-        if (pos>getSize()+1){
+        //change below - change to - 1
+        if (pos > getSize() - 1) {
             System.out.println("ERROR");
             return null;
         }
@@ -39,14 +40,14 @@ public class LinkedList implements List {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         String patients = "";
-        for (int i = 0; i<getSize();i++){
+        for (int i = 0; i < getSize(); i++) {
             patients += get(i) + ",";
         }
-        return patients.substring(0,patients.length()-1);  
+        return patients.substring(0, patients.length() - 1);
     }
-    
+
     @Override
     public int getSize() {
         Node temp = myHead;
@@ -54,9 +55,8 @@ public class LinkedList implements List {
         if (temp == null) {
             return 0;
         }
-        if (temp!=null && temp.getNext() == null){
-            return 1;
-        }
+        //CHANGE BELOW - DELETE THE IF STATMENT
+        
         while (temp.getNext() != null) {
             temp = temp.getNext();
             //if the next node is null, then stop the for loop
@@ -96,15 +96,12 @@ public class LinkedList implements List {
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
-        } 
-        else if(pos==0){
+        } else if (pos == 0) {
             n.setNext(myHead);
             myHead = n;
-        }
-        else if(pos>this.getSize()){
+        } else if (pos > this.getSize()) {
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
-        }
-        else {
+        } else {
             Node prev = (Node) this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
@@ -134,6 +131,20 @@ public class LinkedList implements List {
                 previous.setNext(after);
             }
         }
+
+        /*
+         public void remove(int pos) {
+         Node currentGroceryItem = head;
+        
+         for (int count = 0; count < pos-1; count ++){
+         currentGroceryItem = currentGroceryItem.next;
+         }
+        
+         currentGroceryItem.next = currentGroceryItem.next.next;
+        
+         listSize--;
+         }
+         */
     }
 
     /**
