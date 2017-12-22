@@ -41,6 +41,7 @@ public class LinkedList implements List {
 
     @Override
     public String toString() {
+        //change variable names
         String patients = "";
         for (int i = 0; i < getSize(); i++) {
             patients += get(i) + ",";
@@ -56,7 +57,7 @@ public class LinkedList implements List {
             return 0;
         }
         //CHANGE BELOW - DELETE THE IF STATMENT
-        
+
         while (temp.getNext() != null) {
             temp = temp.getNext();
             //if the next node is null, then stop the for loop
@@ -77,7 +78,7 @@ public class LinkedList implements List {
             myHead = n;
             myTail = n;
         } else {
-            add(item,this.getSize());
+            add(item, this.getSize());
         }
     }
 
@@ -110,17 +111,19 @@ public class LinkedList implements List {
      * Delete an item at a given index i.
      *
      * @param i The index of the item.
+     * @return
      */
     @Override
-    public void remove(int i) {
+    public Object remove(int i) {
         //Node previous to the node at i
         Node previous;
         //Node after to the node at i
         Node after;
         //Node at i is empty
         if (get(i) == null) {
-            return;
-        } else {
+            return null;
+        } //Node at i has a node
+        else {
             previous = get(i - 1);
             if (previous.getNext().getNext() == null) {
                 previous.setNext(null);
@@ -128,21 +131,8 @@ public class LinkedList implements List {
                 after = previous.getNext().getNext();
                 previous.setNext(after);
             }
+            return get(i);
         }
-
-        /*
-         public void remove(int pos) {
-         Node currentGroceryItem = head;
-        
-         for (int count = 0; count < pos-1; count ++){
-         currentGroceryItem = currentGroceryItem.next;
-         }
-        
-         currentGroceryItem.next = currentGroceryItem.next.next;
-        
-         listSize--;
-         }
-         */
     }
 
     /**
