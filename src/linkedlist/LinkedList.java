@@ -77,9 +77,7 @@ public class LinkedList implements List {
             myHead = n;
             myTail = n;
         } else {
-            myTail.setNext(n);
-            myTail = n;
-            myTail.setNext(null);
+            add(item,this.getSize());
         }
     }
 
