@@ -103,7 +103,7 @@ public class LinkedList implements List {
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
         }
         else {
-            Node prev = (Node) this.get(pos - 1);
+            Node prev = this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
         }
