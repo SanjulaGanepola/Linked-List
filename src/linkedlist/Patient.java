@@ -14,7 +14,10 @@ public class Patient implements Comparable {
     private String firstName;
     private String lastName;
     private Integer priority;
-
+    
+    public Patient(){
+        
+    }
     public Patient (String fName, String lName, Integer Priority){
         firstName = fName;
         lastName = lName;
