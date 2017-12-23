@@ -25,8 +25,7 @@ public class LinkedList implements List {
     public Node get(int pos) {
         //Temporary variable that stores the head 
         if (pos > getSize() + 1) {
-            System.out.println("ERROR");
-            return null;
+            throw new IndexOutOfBoundsException("Index Out Of Bounds");
         }
         Node temp = myHead;
         //Loops through the nodes until it reaches the position of the node
@@ -99,8 +98,7 @@ public class LinkedList implements List {
             myHead = n;
         } else if (pos > this.getSize()) {
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
-        }
-        else {
+        } else {
             Node prev = this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
@@ -117,21 +115,20 @@ public class LinkedList implements List {
     public Object remove(int i) {
         //the node to remove
         Node remove = get(i);
-        //remove the head
-        if (remove == getMyHead()) {
-            setMyHead(remove.getNext());
-        } //remove tail
-        else {
+        try {
             //Node previous to the node at i
             Node previous = get(i - 1);
-
+            //Remove the tail
             if (remove.getNext() == null) {
                 previous.setNext(null);
                 setMyTail(previous);
             } else {
-                //set the next of the the previous to the node after the node to remove
+                //Remove the node that is located in the middle of the linked list
                 previous.setNext(remove.getNext());
             }
+        } catch (IndexOutOfBoundsException e) {
+            //remove the head
+            setMyHead(remove.getNext());
         }
         return remove;
     }
@@ -145,17 +142,16 @@ public class LinkedList implements List {
     @Override
     public boolean remove(Object d) {
         Node n = (Node) d;
-
         //The head
         Node temp = myHead;
         for (int i = 0; i < getSize(); i++) {
             if (temp == n) {
                 remove(i);
+                return true;
             }
             temp = temp.getNext();
         }
-        //CHANGE
-        return true;
+        return false;
     }
 
     /**
