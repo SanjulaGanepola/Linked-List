@@ -16,6 +16,9 @@ public class LinkedList implements List {
     //Tail of the LinkedList
     private Node myTail;
 
+    /**
+     * Constructor for a new Linked List
+     */
     public LinkedList() {
         myHead = null;
         myTail = null;
