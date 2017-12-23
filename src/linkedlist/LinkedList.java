@@ -173,15 +173,12 @@ public class LinkedList implements List {
                 previous.setNext(null);
                 //Set the tail node to the previous node
                 myTail = previous;
-                System.out.println("b");
             } //Remove a node located middle of the linked list
             else {
                 //Set the next node of the previous node to the node after the node to remove
                 previous.setNext(remove.getNext());
-                System.out.println("c");
             }
         } catch (IndexOutOfBoundsException e) {
-            System.out.println("a");
             //Remove the head
             myHead = remove.getNext();
         }
@@ -201,10 +198,8 @@ public class LinkedList implements List {
         Node temp = myHead;
         //Loop through the LinkedList
         for (int i = 0; i < getSize(); i++) {
-            System.out.println("try");
             //Check if the node to remove exists at a specific node in the LinkedList
             if (d.getItem().equals(temp.getItem())) {
-                System.out.println("sucess" + i);
                 //Remove the node
                 remove(i);
                 return true;
