@@ -14,35 +14,35 @@ public class Node<I> {
     //We decided to go with singly linked list because insertions and deletions
     //of nodes can be done easily and each node does not require an extra field
     //for a pointer to the previous node.
-
     private I item;
     private Node<I> next;
-    
+
     /**
      * Constructor for Node with item as parameter
+     *
      * @param insert item in the node
      */
     public Node(I insert) {
         setItem(insert);
         setNext(null);
     }
+
     /**
      * Constructor for Node with item and next node as parameter
-     * @param insert    item in the node
-     * @param pnext     next node
+     *
+     * @param insert item in the node
+     * @param pnext next node
      */
     public Node(I insert, Node<I> pnext) {
         setItem(insert);
         setNext(pnext);
     }
 
-    
-    
     /**
      * Output item at node in String format
      */
     @Override
-    public String toString (){
+    public String toString() {
         return item.toString();
     }
 
