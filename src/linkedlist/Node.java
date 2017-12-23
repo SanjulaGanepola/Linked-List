@@ -40,6 +40,7 @@ public class Node<I> {
 
     /**
      * Output item at node in String format
+     * @return item at node as String
      */
     @Override
     public String toString() {
