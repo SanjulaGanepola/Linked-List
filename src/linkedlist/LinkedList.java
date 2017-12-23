@@ -171,7 +171,7 @@ public class LinkedList implements List {
         System.out.println(getSize());
         for (int i = 0; i < getSize(); i++) {
             System.out.println("try");
-            if (n.compareTo(temp) == 0) {
+            if (n.getItem().equals(temp.getItem())) {
                 System.out.println("sucess" +i);
                 remove(i);
                 return true;
