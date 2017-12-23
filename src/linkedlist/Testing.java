@@ -29,7 +29,7 @@ public class Testing {
         //Adds a new patient to the list
         patientList.add(new Node (new Patient ("Hawk","Jamin",2)));
         //Adds a new patient to the first position
-        patientList.add(new Node (new Patient ("Just", "Go", 3)),0);
+        patientList.add(new Node (new Patient ("Just", "Go", 3)),-1);
         
         //Testing toString Method
         System.out.println(patientList);
@@ -39,9 +39,9 @@ public class Testing {
         System.out.println(patientList.get(0));
         
         //Testing Remove Methods
-        patientList.remove(0);
+//        patientList.remove(0);
         System.out.println(patientList);
-        patientList.remove(new Node(Sanju));
+//        patientList.remove(new Node(Sanju));
         System.out.println(patientList);
 
     }

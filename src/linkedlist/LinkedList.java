@@ -139,8 +139,8 @@ public class LinkedList implements List {
             //set the head to the node
             myHead = n;
         } 
-        //if a node is added past the linked list size
-        else if (pos > this.getSize()) {
+        //if a node is added past the linked list size or less than 0
+        else if (pos > this.getSize()||pos<0) {
             //throw index out of bounds exception
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
         } 
