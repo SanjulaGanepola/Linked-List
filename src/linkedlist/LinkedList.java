@@ -10,10 +10,14 @@ package linkedlist;
  * @author 348676487
  */
 public class LinkedList implements List {
-
+    
+    //Head and Tail of the Linked List 
     private Node myHead;
     private Node myTail;
 
+    /**
+     * Constructor for a new Linked List
+     */
     public LinkedList() {
         myHead = null;
         myTail = null;
