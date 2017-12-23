@@ -14,7 +14,7 @@ public class Node<I> implements Comparable<Node>{
     //get marks deducted from it.
     private I item;
     private Node<I> next;
-
+    Patient p = new Patient();
     public Node(I insert) {
         setItem(insert);
         setNext(null);
@@ -26,8 +26,8 @@ public class Node<I> implements Comparable<Node>{
     }
 
     @Override
-    public int compareTo(Node o) {        
-        return 0;
+    public int compareTo(Node o) {
+        return p.compareTo(o);
     }
     public String toString (){
         return item.toString();
