@@ -24,7 +24,7 @@ public class LinkedList implements List {
     @Override
     public Node get(int pos) {
         //Temporary variable that stores the head 
-        if (pos > getSize() + 1) {
+        if (pos > getSize() - 1 || pos < 0) {
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
         }
         Node temp = myHead;
@@ -54,8 +54,6 @@ public class LinkedList implements List {
         if (temp == null) {
             return 0;
         }
-        //CHANGE BELOW - DELETE THE IF STATMENT
-
         while (temp.getNext() != null) {
             temp = temp.getNext();
             //if the next node is null, then stop the for loop
@@ -115,9 +113,11 @@ public class LinkedList implements List {
     public Object remove(int i) {
         //the node to remove
         Node remove = get(i);
+        System.out.println("Removing " + remove);
         try {
             //Node previous to the node at i
             Node previous = get(i - 1);
+            System.out.println("prev " + previous);
             //Remove the tail
             if (remove.getNext() == null) {
                 previous.setNext(null);
@@ -129,6 +129,7 @@ public class LinkedList implements List {
         } catch (IndexOutOfBoundsException e) {
             //remove the head
             setMyHead(remove.getNext());
+            System.out.println("head" + myHead);
         }
         return remove;
     }
@@ -144,8 +145,9 @@ public class LinkedList implements List {
         Node n = (Node) d;
         //The head
         Node temp = myHead;
+        System.out.println(getSize());
         for (int i = 0; i < getSize(); i++) {
-            if (temp == n) {
+            if (temp.compareTo(n) == 0) {
                 remove(i);
                 return true;
             }
