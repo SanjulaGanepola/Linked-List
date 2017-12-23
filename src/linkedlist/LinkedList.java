@@ -54,7 +54,7 @@ public class LinkedList implements List {
         if (temp == null) {
             return 0;
         }
-        if (temp!=null && temp.getNext() == null){
+        if (temp.getNext() == null){
             return 1;
         }
         while (temp.getNext() != null) {
