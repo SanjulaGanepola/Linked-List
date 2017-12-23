@@ -28,12 +28,12 @@ public class Patient implements Comparable {
      *
      * @param fName First name of the patient
      * @param lName Last name of the patient
-     * @param Priority Priority of the patient
+     * @param priority Priority of the patient
      */
-    public Patient(String fName, String lName, Integer Priority) {
+    public Patient(String fName, String lName, Integer priority) {
         firstName = fName;
         lastName = lName;
-        priority = Priority;
+        priority = priority;
     }
 
     /**
