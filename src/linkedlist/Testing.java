@@ -39,10 +39,10 @@ public class Testing {
         System.out.println(patientList.get(0));
         
         //Testing Remove Methods
-        //Remove the first patient
+        //Removes the first patient
         patientList.remove(0);
         System.out.println(patientList);
-        //Remove an exists patient
+        //Removes an exists patient
         patientList.remove(new Node(Sanju));
         System.out.println(patientList);
 
