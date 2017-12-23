@@ -16,17 +16,19 @@ public class Testing {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        
         //Test Cases
         //Creating new Linked List
         LinkedList patientList = new LinkedList();
         
         //Testing Add Methods
+        //Creating a New Patient using Patient class
         Patient Sanju = new Patient ("Sanju","Riser",1);
         //Adds an already existing patient
         patientList.add(new Node (Sanju));
-        //Adds a patient to the list
+        //Adds a new patient to the list
         patientList.add(new Node (new Patient ("Hawk","Jamin",2)));
-        //Adds a patient to the first position
+        //Adds a new patient to the first position
         patientList.add(new Node (new Patient ("Just", "Go", 3)),0);
         
         //Testing toString Method
