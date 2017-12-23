@@ -34,7 +34,7 @@ public class Testing {
         //Testing toString Method
         System.out.println(patientList);
         //Testing getSize Method
- //       System.out.println(patientList.getSize());
+        System.out.println(patientList.getSize());
         //Testing get Method
         System.out.println(patientList.get(0));
 
