@@ -191,21 +191,19 @@ public class LinkedList implements List {
     /**
      * Delete a matching item d.
      *
-     * @param d The item to remove.
+     * @param d The item node to remove.
      * @return True if the node was removed or false if the node was not
      * removed.
      */
     @Override
-    public boolean remove(Object d) {
-        //The node to remove
-        Node n = (Node) d;
+    public boolean remove(Node d) {
         //The temporary head node
         Node temp = myHead;
         //Loop through the LinkedList
         for (int i = 0; i < getSize(); i++) {
             System.out.println("try");
             //Check if the node to remove exists at a specific node in the LinkedList
-            if (n.getItem().equals(temp.getItem())) {
+            if (d.getItem().equals(temp.getItem())) {
                 System.out.println("sucess" + i);
                 //Remove the node
                 remove(i);
