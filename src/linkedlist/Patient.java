@@ -20,7 +20,7 @@ public class Patient implements Comparable {
      * Empty Constructor for a new patient
      */
     public Patient() {
-    
+
     }
 
     /**
@@ -33,7 +33,7 @@ public class Patient implements Comparable {
     public Patient(String firstName, String lastName, Integer priority) {
         this.firstName = firstName;
         this.lastName = lastName;
-       this. priority = priority;
+        this.priority = priority;
     }
 
     /**
