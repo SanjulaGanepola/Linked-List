@@ -64,8 +64,13 @@ public class LinkedList implements List {
             //Adds each patient to the String
             data += get(i) + ",";
         }
+        //Returns substring if the data is not empty
+        if (myHead!=null){
         //Returns the String excluding the last comma
         return data.substring(0, data.length() - 1);
+    }
+        //Returns blank
+        return data;
     }
 
     /**
