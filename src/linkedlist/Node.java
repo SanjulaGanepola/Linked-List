@@ -17,7 +17,7 @@ public class Node<I> {
 
     private I item;
     private Node<I> next;
-    Patient p = new Patient();
+    
     /**
      * Constructor for Node with item as parameter
      * @param insert item in the node
