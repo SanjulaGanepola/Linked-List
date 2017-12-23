@@ -125,17 +125,31 @@ public class LinkedList implements List {
         Node n = (Node) item;
         //if added to end of list
         if (pos == this.getSize()) {
+            //set the node after the tail
             myTail.setNext(n);
+            //set the tail to that node
             myTail = n;
+            //set that node's next is empty
             myTail.setNext(null);
-        } else if (pos == 0) {
+        } 
+        //if adding to front of list
+        else if (pos == 0) {
+            //set the node's next to the head node
             n.setNext(myHead);
+            //set the head to the node
             myHead = n;
-        } else if (pos > this.getSize()) {
+        } 
+        //if a node is added past the linked list size
+        else if (pos > this.getSize()) {
+            //throw index out of bounds exception
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
-        } else {
+        } 
+        else {
+            //find the node before the node at target position
             Node prev = this.get(pos - 1);
+            //set node's next to the position
             n.setNext(prev.getNext());
+            //set the previous node's next to current node
             prev.setNext(n);
         }
     }
