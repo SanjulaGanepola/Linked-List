@@ -51,7 +51,7 @@ public class Patient implements Comparable {
      *
      * @param o Object to be compared to
      * @return Negative integer if priority is lower, zero if priority is the
-     * same and a positive number if priority is higher
+     * same and a positive number if priority is higher.
      */
     @Override
     public int compareTo(Object o) {
