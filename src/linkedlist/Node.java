@@ -9,7 +9,7 @@ package linkedlist;
  *
  * @author 072671415
  */
-public class Node<I> implements Comparable<Node>{
+public class Node<I>{
     //The design decision was to be single because it's easier because we don't
     //get marks deducted from it.
     private I item;
@@ -25,10 +25,7 @@ public class Node<I> implements Comparable<Node>{
         setNext(pnext);
     }
 
-    @Override
-    public int compareTo(Node o) {
-        return p.compareTo(o);
-    }
+
     public String toString (){
         return item.toString();
     }

@@ -45,7 +45,7 @@ public class Testing {
         //Remove an exists patient
         patientList.remove(new Node(Sanju));
         System.out.println(patientList);
-        
+
     }
     
 }
