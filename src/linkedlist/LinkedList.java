@@ -11,7 +11,9 @@ package linkedlist;
  */
 public class LinkedList implements List {
 
+    //Head of the LinkedList
     private Node myHead;
+    //Tail of the LinkedList
     private Node myTail;
 
     public LinkedList() {
