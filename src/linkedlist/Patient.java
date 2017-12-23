@@ -34,12 +34,7 @@ public class Patient implements Comparable {
     @Override
     public int compareTo(Object o) {
         Patient patient = (Patient) o;
-        if (firstName.compareTo(patient.firstName) == 0) {
-            if (lastName.compareTo(patient.lastName) == 0) {
-                return priority.compareTo(patient.priority);
-            }
-        }
-        return -1;
+        return priority.compareTo(patient.priority);
     }
 
     /**

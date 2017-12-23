@@ -97,7 +97,7 @@ public class LinkedList implements List {
             myHead = n;
             myTail = n;
         } else {
-            add(item,this.getSize());
+            add(item, this.getSize());
         }
     }
 
@@ -114,15 +114,12 @@ public class LinkedList implements List {
             myTail.setNext(n);
             myTail = n;
             myTail.setNext(null);
-        } 
-        else if(pos==0){
+        } else if (pos == 0) {
             n.setNext(myHead);
             myHead = n;
-        }
-        else if(pos>this.getSize()){
+        } else if (pos > this.getSize()) {
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
-        }
-        else {
+        } else {
             Node prev = this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
@@ -139,23 +136,23 @@ public class LinkedList implements List {
     public Object remove(int i) {
         //the node to remove
         Node remove = get(i);
-        System.out.println("Removing " + remove);
         try {
             //Node previous to the node at i
             Node previous = get(i - 1);
-            System.out.println("prev " + previous);
             //Remove the tail
             if (remove.getNext() == null) {
                 previous.setNext(null);
-                setMyTail(previous);
+                myTail = previous;
+                System.out.println("b");
             } else {
                 //Remove the node that is located in the middle of the linked list
                 previous.setNext(remove.getNext());
+                System.out.println("c");
             }
         } catch (IndexOutOfBoundsException e) {
             //remove the head
-            setMyHead(remove.getNext());
-            System.out.println("head" + getMyHead());
+            System.out.println("a");
+            myHead = remove.getNext();
         }
         return remove;
     }
@@ -173,7 +170,9 @@ public class LinkedList implements List {
         Node temp = myHead;
         System.out.println(getSize());
         for (int i = 0; i < getSize(); i++) {
-            if (temp.compareTo(n) == 0) {
+            System.out.println("try");
+            if (n.getItem().equals(temp.getItem())) {
+                System.out.println("sucess" +i);
                 remove(i);
                 return true;
             }
