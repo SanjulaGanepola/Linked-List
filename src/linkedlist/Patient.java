@@ -26,14 +26,14 @@ public class Patient implements Comparable {
     /**
      * Constructor for a new patient with the required fields.
      *
-     * @param fName First name of the patient
-     * @param lName Last name of the patient
+     * @param firstName First name of the patient
+     * @param lastName Last name of the patient
      * @param priority Priority of the patient
      */
-    public Patient(String fName, String lName, Integer priority) {
-        firstName = fName;
-        lastName = lName;
-        priority = priority;
+    public Patient(String firstName, String lastName, Integer priority) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+       this. priority = priority;
     }
 
     /**
