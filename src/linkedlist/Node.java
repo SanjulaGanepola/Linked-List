@@ -37,10 +37,11 @@ public class Node<I> {
     }
 
     
-    @Override
+    
     /**
      * Output item at node in String format
      */
+    @Override
     public String toString (){
         return item.toString();
     }
