@@ -43,7 +43,7 @@ public class Testing {
         System.out.println(patientList);
         patientList.remove(new Node (Sanju));
         System.out.println(patientList);
-        
+
     }
     
 }
