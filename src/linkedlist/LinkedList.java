@@ -24,8 +24,9 @@ public class LinkedList implements List {
     @Override
     public Node get(int pos) {
         //Temporary variable that stores the head 
-        if (pos > getSize() - 1 || pos < 0) {
-            throw new IndexOutOfBoundsException("Index Out Of Bounds");
+        if (pos>getSize()+1){
+            System.out.println("ERROR");
+            return null;
         }
         Node temp = myHead;
         //Loops through the nodes until it reaches the position of the node
@@ -38,21 +39,23 @@ public class LinkedList implements List {
     }
 
     @Override
-    public String toString() {
-        //change variable names
+    public String toString(){
         String patients = "";
-        for (int i = 0; i < getSize(); i++) {
+        for (int i = 0; i<getSize();i++){
             patients += get(i) + ",";
         }
-        return patients.substring(0, patients.length() - 1);
+        return patients.substring(0,patients.length()-1);
     }
 
-    @Override
+   @Override
     public int getSize() {
         Node temp = myHead;
         int i = 1;
         if (temp == null) {
             return 0;
+        }
+        if (temp!=null && temp.getNext() == null){
+            return 1;
         }
         while (temp.getNext() != null) {
             temp = temp.getNext();
@@ -72,9 +75,9 @@ public class LinkedList implements List {
         Node n = (Node) item;
         if (myHead == null) {
             myHead = n;
-            setMyTail(n);
+            myTail = n;
         } else {
-            add(item, this.getSize());
+            add(item,this.getSize());
         }
     }
 
@@ -88,15 +91,18 @@ public class LinkedList implements List {
     public void add(Object item, int pos) {
         Node n = (Node) item;
         if (pos == this.getSize()) {
-            getMyTail().setNext(n);
-            setMyTail(n);
-            getMyTail().setNext(null);
-        } else if (pos == 0) {
+            myTail.setNext(n);
+            myTail = n;
+            myTail.setNext(null);
+        } 
+        else if(pos==0){
             n.setNext(myHead);
             myHead = n;
-        } else if (pos > this.getSize()) {
+        }
+        else if(pos>this.getSize()){
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
-        } else {
+        }
+        else {
             Node prev = this.get(pos - 1);
             n.setNext(prev.getNext());
             prev.setNext(n);
@@ -129,7 +135,7 @@ public class LinkedList implements List {
         } catch (IndexOutOfBoundsException e) {
             //remove the head
             setMyHead(remove.getNext());
-            System.out.println("head" + myHead);
+            System.out.println("head" + getMyHead());
         }
         return remove;
     }
