@@ -18,18 +18,30 @@ public class Node<I> {
     private I item;
     private Node<I> next;
     Patient p = new Patient();
-
+    /**
+     * Constructor for Node with item as parameter
+     * @param insert item in the node
+     */
     public Node(I insert) {
         setItem(insert);
         setNext(null);
     }
-
+    /**
+     * Constructor for Node with item and next node as parameter
+     * @param insert    item in the node
+     * @param pnext     next node
+     */
     public Node(I insert, Node<I> pnext) {
         setItem(insert);
         setNext(pnext);
     }
 
-    public String toString() {
+    
+    @Override
+    /**
+     * Output item at node in String format
+     */
+    public String toString (){
         return item.toString();
     }
 
