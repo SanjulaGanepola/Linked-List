@@ -24,5 +24,5 @@ public interface List {
 
     public Object remove(int i);
 
-    public void remove(Object d);
+    public boolean remove(Object d);
 }

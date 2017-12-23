@@ -24,8 +24,7 @@ public class LinkedList implements List {
     @Override
     public Node get(int pos) {
         //Temporary variable that stores the head 
-        //change below - change to - 1
-        if (pos > getSize() - 1) {
+        if (pos > getSize() + 1) {
             System.out.println("ERROR");
             return null;
         }
@@ -115,55 +114,47 @@ public class LinkedList implements List {
      */
     @Override
     public Object remove(int i) {
-        Node remove;
-
-        //Node previous to the node at i
-        Node previous;
-        //Node at i is empty
-        if (get(i) == null) {
-            return null;
-        } //Node at i has a node
+        //the node to remove
+        Node remove = get(i);
+        //remove the head
+        if (remove == getMyHead()) {
+            setMyHead(remove.getNext());
+        } //remove tail
         else {
-            //the node to remove
-            remove = get(i);
-            //remove the head
-            if (remove == getMyHead()) {
-                setMyHead(remove.getNext());
-            } //remove tail
-            else if (remove == getMyTail()) {
-                previous = get(i - 1);
+            //Node previous to the node at i
+            Node previous = get(i - 1);
+
+            if (remove.getNext() == null) {
                 previous.setNext(null);
                 setMyTail(previous);
             } else {
-                //the node previous to the node to remove
-                previous = get(i - 1);
-                Node after = previous.getNext().getNext();
-                previous.setNext(after);
+                //set the next of the the previous to the node after the node to remove
+                previous.setNext(remove.getNext());
             }
-            return remove;
         }
+        return remove;
     }
 
     /**
      * Delete a matching item d.
      *
      * @param d The item to remove.
+     * @return
      */
     @Override
-    public void remove(Object d) {
+    public boolean remove(Object d) {
         Node n = (Node) d;
-        if (myHead == n.getItem()) {
-            //????????????????????????????
-            //remove the head but i need to shift it all back
-            remove(0);
-        }
+
+        //The head
         Node temp = myHead;
-        for (int i = 1; i < getSize(); i++) {
-            temp = temp.getNext();
-            if (temp == n.getItem()) {
+        for (int i = 0; i < getSize(); i++) {
+            if (temp == n) {
                 remove(i);
             }
+            temp = temp.getNext();
         }
+        //CHANGE
+        return true;
     }
 
     /**
