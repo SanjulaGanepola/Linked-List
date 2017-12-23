@@ -100,11 +100,15 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item) {
+        //the node to add
         Node n = (Node) item;
-        if (myHead == null) {
+        //if there is no head node
+        if (this.getSize() == 0) {
+            //set both head and tail to node
             myHead = n;
             myTail = n;
         } else {
+            //add node to end of list
             add(item, this.getSize());
         }
     }
@@ -117,7 +121,9 @@ public class LinkedList implements List {
      */
     @Override
     public void add(Object item, int pos) {
+        //the node to add
         Node n = (Node) item;
+        //if added to end of list
         if (pos == this.getSize()) {
             myTail.setNext(n);
             myTail = n;
