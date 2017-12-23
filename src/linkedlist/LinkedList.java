@@ -65,10 +65,10 @@ public class LinkedList implements List {
             data += get(i) + ",";
         }
         //Returns substring if the data is not empty
-        if (myHead!=null){
-        //Returns the String excluding the last comma
-        return data.substring(0, data.length() - 1);
-    }
+        if (myHead != null) {
+            //Returns the String excluding the last comma
+            return data.substring(0, data.length() - 1);
+        }
         //Returns blank
         return data;
     }
@@ -136,20 +136,17 @@ public class LinkedList implements List {
             myTail = n;
             //set that node's next is empty
             myTail.setNext(null);
-        } 
-        //if adding to front of list
+        } //if adding to front of list
         else if (pos == 0) {
             //set the node's next to the head node
             n.setNext(myHead);
             //set the head to the node
             myHead = n;
-        } 
-        //if a node is added past the linked list size or less than 0
-        else if (pos > this.getSize()||pos<0) {
+        } //if a node is added past the linked list size or less than 0
+        else if (pos > this.getSize() || pos < 0) {
             //throw index out of bounds exception
             throw new IndexOutOfBoundsException("Index Out Of Bounds");
-        } 
-        else {
+        } else {
             //find the node before the node at target position
             Node prev = this.get(pos - 1);
             //set node's next to the position
@@ -183,9 +180,16 @@ public class LinkedList implements List {
                 //Set the next node of the previous node to the node after the node to remove
                 previous.setNext(remove.getNext());
             }
-        } catch (IndexOutOfBoundsException e) {
-            //Remove the head
-            myHead = remove.getNext();
+        } //Remove the head
+        catch (IndexOutOfBoundsException e) {
+            //Remove the head and tail node
+            if (remove.getNext() == null) {
+                myHead = null;
+                myTail = null;
+            } //Remove the head node
+            else {
+                myHead = remove.getNext();
+            }
         }
         return remove;
     }
