@@ -44,7 +44,6 @@ public class Testing {
         patientList.remove(Sanju);
         System.out.println(patientList);
         
-        //System.out.println(patientList.get(3));
     }
     
 }
