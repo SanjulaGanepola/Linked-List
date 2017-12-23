@@ -20,6 +20,7 @@ public class Patient implements Comparable {
      * Empty Constructor for a new patient
      */
     public Patient() {
+    
     }
 
     /**
