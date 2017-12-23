@@ -9,8 +9,8 @@ package linkedlist;
  *
  * @author 348676487
  */
-public interface List { 
-    
+public interface List {
+
     public void add(Object item);
 
     public void add(Object item, int pos);

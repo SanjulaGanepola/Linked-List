@@ -65,10 +65,10 @@ public class LinkedList implements List {
             data += get(i) + ",";
         }
         //Returns substring if the data is not empty
-        if (myHead!=null){
-        //Returns the String excluding the last comma
-        return data.substring(0, data.length() - 1);
-    }
+        if (myHead != null) {
+            //Returns the String excluding the last comma
+            return data.substring(0, data.length() - 1);
+        }
         //Returns blank
         return data;
     }
@@ -186,8 +186,7 @@ public class LinkedList implements List {
             if (remove.getNext() == null) {
                 myHead = null;
                 myTail = null;
-            } 
-            //Remove the head node
+            } //Remove the head node
             else {
                 myHead = remove.getNext();
             }

@@ -9,13 +9,16 @@ package linkedlist;
  *
  * @author 072671415
  */
-public class Node<I>{
+public class Node<I> {
+
     //We decided to go with singly linked list because insertions and deletions
     //of nodes can be done easily and each node does not require an extra field
     //for a pointer to the previous node.
+
     private I item;
     private Node<I> next;
     Patient p = new Patient();
+
     public Node(I insert) {
         setItem(insert);
         setNext(null);
@@ -26,10 +29,10 @@ public class Node<I>{
         setNext(pnext);
     }
 
-
-    public String toString (){
+    public String toString() {
         return item.toString();
     }
+
     /**
      * @return the item
      */
